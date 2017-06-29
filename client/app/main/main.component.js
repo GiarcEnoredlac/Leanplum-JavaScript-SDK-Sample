@@ -58,6 +58,12 @@ export class MainController {
     this.$http.delete(`/api/things/${thing._id}`);
   }
 
+  globalEvent(){
+    leanplum.track('web push global event');
+   this.$http.get('http://www.leanplum.com/api?appId=app_WOLHGvhA1YccBk4WRfWwrXk3wok4GZIvfn2kU3f8ork&clientKey=brd_CsfTCLk5Ar8vzhWI0elhR7buqRBNU6cJhIE94U8GHIk&apiVersion=1.0.6&action=broadcast&globalEvent=globalEvent')
+    console.log('global event triggered')
+  }
+
   toggleWebPush() {
     console.log('WebPush is ', this.settings.isWebPushSubscribed);
     if (!this.settings.isWebPushSubscribed) {

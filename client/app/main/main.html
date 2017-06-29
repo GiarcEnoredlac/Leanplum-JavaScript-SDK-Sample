@@ -21,22 +21,28 @@
     <div class="col-lg-12">
       <h1 class="page-header">Settings</h1>
       <div class="row">
-        <div class="col-xs-6 col-sm-2">Web Push</div>
-        <div class="col-xs-3 col=sm-2">
+        <div class="col-md-4">
+          <p>
+            Web Push
+          </p>
           <label class="switch" ng-show="$ctrl.settings.isWebPushSupported">
             <input type="checkbox" ng-change="$ctrl.toggleWebPush()" ng-model="$ctrl.settings.isWebPushSubscribed">
             <div class="slider round"></div>
           </label>
           <label ng-hide="$ctrl.settings.isWebPushSupported">Not supported in your browser.</label>
         </div>
-        <div class="col-xs-3 col=sm-2">
+        <div class="col-md-4">
           <p>Subscribed: {{$ctrl.settings.isWebPushSubscribed}}</p>
+        </div>
+        <div class="col-md-4">
+          <button class="btn btn-success" ng-click="$ctrl.globalEvent(); $event.stopPropagation();">Trigger Web Push</button>
         </div>
       </div>
     </div>
   </div>
-
-  <div class="row">
+  <div class="page-header"></div>
+  <br>
+ <!--  <div class="row">
     <div class="col-lg-12">
       <h1 class="page-header">Features</h1>
       <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="thing in $ctrl.awesomeThings">
@@ -53,5 +59,5 @@
         <button type="submit" class="btn btn-primary" ng-click="$ctrl.addThing()">Add New</button>
       </span>
     </p>
-  </form>
+  </form> -->
 </div>

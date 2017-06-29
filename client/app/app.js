@@ -29,8 +29,11 @@ import socket from '../components/socket/socket.service';
 
 import './app.scss';
 
-leanplum.setAppIdForProductionMode('app_BWTRIgOs0OoevDfSsBtabRiGffu5wOFU3mkxIxA7NBs',
-  'prod_A1c7DfHO6XTo2BRwzhkkXKFJ6oaPtoMnRA9xpPSlx74');
+
+leanplum.setAppIdForDevelopmentMode('app_WOLHGvhA1YccBk4WRfWwrXk3wok4GZIvfn2kU3f8ork',
+  'dev_vYJLCLGD77s9GtMiF0gHdRoMiZsrryPa7vMBkPKCZXg');
+leanplum.setAppIdForProductionMode('app_WOLHGvhA1YccBk4WRfWwrXk3wok4GZIvfn2kU3f8ork',
+  'prod_6uGH0WWcNkCzouilZD01JRXd1qJpvMqelUDv0fGsXgs');
 leanplum.start();
 leanplum.track('start');
 
