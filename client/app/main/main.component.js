@@ -59,9 +59,9 @@ export class MainController {
   }
 
   globalEvent(){
-    leanplum.track('web push global event');
-   this.$http.get('http://www.leanplum.com/api?appId=app_WOLHGvhA1YccBk4WRfWwrXk3wok4GZIvfn2kU3f8ork&clientKey=brd_CsfTCLk5Ar8vzhWI0elhR7buqRBNU6cJhIE94U8GHIk&apiVersion=1.0.6&action=broadcast&globalEvent=globalEvent')
-    console.log('global event triggered')
+    leanplum.track('web push event');
+   this.$http.post('https://www.leanplum.com/api?action=track&appId=app_WOLHGvhA1YccBk4WRfWwrXk3wok4GZIvfn2kU3f8ork&clientKey=dev_vYJLCLGD77s9GtMiF0gHdRoMiZsrryPa7vMBkPKCZXg&apiVersion=1.0.6&userId=craig@leanplum.com&createDisposition=CreateIfNeeded&devMode=true&event=webPushEvent&time=1516988516')
+    console.log('Web push triggered')
   }
 
   toggleWebPush() {

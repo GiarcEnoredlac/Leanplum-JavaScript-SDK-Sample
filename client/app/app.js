@@ -32,9 +32,11 @@ import './app.scss';
 
 leanplum.setAppIdForDevelopmentMode('app_WOLHGvhA1YccBk4WRfWwrXk3wok4GZIvfn2kU3f8ork',
   'dev_vYJLCLGD77s9GtMiF0gHdRoMiZsrryPa7vMBkPKCZXg');
-leanplum.setAppIdForProductionMode('app_WOLHGvhA1YccBk4WRfWwrXk3wok4GZIvfn2kU3f8ork',
-  'prod_6uGH0WWcNkCzouilZD01JRXd1qJpvMqelUDv0fGsXgs');
-leanplum.start();
+
+// leanplum.setAppIdForProductionMode('app_WOLHGvhA1YccBk4WRfWwrXk3wok4GZIvfn2kU3f8ork',
+//   'prod_6uGH0WWcNkCzouilZD01JRXd1qJpvMqelUDv0fGsXgs');
+// }
+leanplum.start('craig@leanplum.com');
 leanplum.track('start');
 
 angular.module('leanplumJavaScriptSdkSampleApp', [ngCookies, ngResource, ngSanitize,
